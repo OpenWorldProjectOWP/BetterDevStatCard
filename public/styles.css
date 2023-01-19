@@ -1,0 +1,306 @@
+/* Setting up some variables for styling */
+
+:root {
+  /*Colors*/
+
+  --Dark-desaturated-blue: hsl(244, 38%, 16%); /*card background*/
+  --Soft-violet: hsl(277, 64%, 61%); /*accent*/
+
+  /*Neutral*/
+
+  --W: hsl(0, 0%, 100%); /*main heading, stats*/
+  --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75); /*main paragraph*/
+  --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6); /*stat headings*/
+
+  /*Typography*/
+
+  /*Body Copy*/
+
+  --Fs-xl: 5rem; /*Used on the opening line of the card*/
+  --Fs-r: 3rem; /*Used on the main body texts*/
+  --Fs-s: 2rem; /*Used on the small stat texts at the bottom*/
+
+  /*Font*/
+
+  --F-one: "Inter", sans-serif; /*400 and 700 weights*/
+  --F-two: "Lexend Deca", sans-serif; /*400 weight*/
+}
+
+/*Resetting the default styles applied by the browser*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Setting up the body as the outer most container*/
+
+body {
+  display: flex; /*Makes flex container*/
+  justify-content: center; /*Centering content on the x-axis*/
+  align-items: center; /*Centering content on the y-axis*/
+  width: 100%; /*Using the full width of the window*/
+  min-height: 100vh; /*Using the full height of the users viewport*/
+  background-color: hsl(
+    233,
+    46%,
+    7%
+  ); /*Sets background color of the body to a dark purple color*/
+}
+
+/*Setting up main as second most outer container*/
+
+main {
+  display: flex; /*Makes flex container*/
+  justify-content: center; /*Centering content on the x-axis*/
+  align-items: center; /*Centering content on the y-axis*/
+  width: 94.5%; /*Using slightly less than the full width of the window*/
+  height: 1000px; /*Using a fixed height to avoid smashing the content*/
+}
+
+/*Setting up the left side of the main as the third container*/
+
+.card1 {
+  width: 100%; /*Using full width of the inner container*/
+  height: 100%; /*Using full height of the inner container*/
+  background-color: var(
+    --Dark-desaturated-blue
+  ); /*Using color variable from the root to set background color of thrid container*/
+  border-top-left-radius: 15px; /*Curving the top corner to give a better card appearance*/
+  border-bottom-left-radius: 15px; /*Curving the bottom corner of the card to give a better card appearance*/
+  padding-right: 3%; /*Using padding to force the typography away from fourth container*/
+}
+
+/*Setting up typography inside third container*/
+
+h1 {
+  color: var(
+    --W
+  ); /*Using variable color from the root to set the color of the text to white*/
+  font-family: var(
+    --F-one
+  ); /*Using a font family variable from the root to set the style of the text*/
+  font-weight: 700; /*Setting the thickness of the text to be bolded*/
+  font-size: var(
+    --Fs-xl
+  ); /*Using a font size variable from the root to set the size of the text*/
+  margin-top: 8%; /*Pushes the text away from the top of the third container*/
+  margin-left: 10%; /*Pushes the text away from the left side of the container*/
+  margin-bottom: 50px; /*Pushes away the content below the text*/
+}
+
+p {
+  color: var(
+    --Slightly-transparent-white
+  ); /*Setting color of main text using a root variable - sets an off-white color*/
+  margin-left: 10%; /*Pushes the text away from the left side of the container*/
+}
+
+#purple_word {
+  color: var(
+    --Soft-violet
+  ); /*Using a variable from the root the set the color of one word to a light purple*/
+}
+
+.main_text {
+  font-size: var(
+    --Fs-r
+  ); /*Using a font size variable from the root to set the size of the text*/
+  margin-bottom: 5%; /*Pushes away the content below the text*/
+}
+
+.foot_notes {
+  display: flex; /*Makes flex container*/
+  align-items: center; /*Centering content on the y-axis*/
+  margin-top: 20%; /*Pushes the text away from other content above*/
+  margin-left: 10%; /*Pushes the text away from the left side of the container*/
+  padding-right: 10%; /*Using padding to force the typography away from fourth container*/
+}
+
+.note2,
+.note3 {
+  margin-left: 20%; /*Pushes the text away from the left side of the container*/
+}
+
+.note_head {
+  color: var(
+    --W
+  ); /*Using variable color from the root to set the color of the text to white*/
+  font-weight: 700; /*Setting the thickness of the text to be bolded*/
+  font-family: var(
+    --F-one
+  ); /*Using a font family variable from the root to set the style of the text*/
+  font-size: var(
+    --Fs-r
+  ); /*Using a font size variable from the root to set the size of the text*/
+}
+
+.note_foot {
+  font-family: var(
+    --F-two
+  ); /*Using a font family variable from the root to set the style of the text*/
+  font-weight: 400; /*Setting the thickness of the text to be more regular in appearance*/
+  font-size: var(
+    --Fs-s
+  ); /*Using a font size variable from the root to set the size of the text*/
+  margin-top: 5%; /*Pushes the text away from other content above*/
+}
+
+/*Setting up the fourth container (right side - top side of mobile version)*/
+
+.card2 {
+  width: 100%; /*Using full width of the inner container*/
+  height: 100%; /*Using full height of the inner container*/
+  border-top-right-radius: 15px; /*Curving the top corner to give a better card appearance*/
+  border-bottom-right-radius: 15px; /*Curving the bottom corner of the card to give a better card appearance*/
+  background-image: url(/imgs/image-header-desktop.jpg); /*Using an image to fill the fourth card*/
+  background-position: center; /*Fixing the image to sit centered in the container*/
+  background-size: cover; /*Stretches the image to fill the container*/
+  background-repeat: no-repeat; /*Stops the image from repeating when container becomes larger*/
+}
+
+/*Placing an overlay on top of the image*/
+
+.image {
+  width: 100%; /*Using full width of container*/
+  height: 100%; /*Using full height of container*/
+  background-color: hsl(
+    277,
+    58%,
+    59%,
+    0.4
+  ); /*Puts a slightly transparent light purple overlay on top of the existing image*/
+
+  border-top-right-radius: 15px; /*Curving the top corner to give a better card appearance*/
+  border-bottom-right-radius: 15px; /*Curving the bottom corner of the card to give a better card appearance*/
+}
+
+/*Setting up conditions for smaller screen sizes*/
+
+@media (max-width: 1423px) {
+  /*Sets up rules for screen sizes 1423px and smaller*/
+  :root {
+    /*Reassigning variable values*/
+    --Fs-xl: 3.9rem; /*Making the font size smaller to allow extra room in the third contianer*/
+  }
+}
+
+@media (max-width: 1118px) {
+  /*Sets up rules for screen sizes 1118px and smaller*/
+  :root {
+    /*Reassigning variable values*/
+    --Fs-r: 1.6rem; /*Making the font size smaller to allow extra room in the third contianer*/
+    --Fs-s: 1.3rem; /*Making the font size smaller to allow extra room in the third contianer*/
+  }
+}
+
+@media (max-height: 922px) {
+  /*Sets up rules for screen sizes 922px and smaller*/
+  main {
+    /*Reassigning rules for the second container*/
+    height: 800px; /*Shortening the height to allow more room for the fourth container*/
+  }
+
+  :root {
+    /*Reassigning variable values*/
+    --Fs-r: 2rem; /*Making the font size smaller to allow extra room in the third contianer*/
+  }
+
+  h1, /*Reassigning rules for several of the text sections*/
+  p,
+  .foot_notes,
+  .note2,
+  .note3 {
+    margin-left: 5%; /*Collapsing the margin to move text further away from the fourth container*/
+  }
+}
+
+@media (max-width: 852px) {
+  /*Sets up rules for screen sizes 852px and smaller*/
+  main {
+    /*Reassigning rules for the second container*/
+    flex-direction: column-reverse; /*Puts the third and fourth containers on top of each other but moves the fourth container to the top*/
+    height: 100vh; /*Uses full height of the viewport instead of a fixed height*/
+  }
+
+  .card1 {
+    /*Reassigning rules for the third container*/
+    border-bottom-left-radius: 15px; /*Curving the bottom corner of the card to give a better card appearance*/
+    border-bottom-right-radius: 15px; /*Curving the bottom corner of the card to give a better card appearance*/
+    border-top-left-radius: 0; /*Removing the curve at the top of the card*/
+    height: 500px; /*Using a fixed height to allow more room for fourth container*/
+  }
+
+  .card2 {
+    /*Reassigning rules for the fourth container*/
+    background-image: url(/imgs/image-header-mobile.jpg); /*Using a mobile friendly version of the image in fourth container*/
+    border-bottom-right-radius: 0; /*Removing the curve at the bottom of the card*/
+    border-top-left-radius: 15px; /*Curving the top corner to give a better card appearance*/
+    border-top-right-radius: 15px; /*Curving the top corner to give a better card appearance*/
+  }
+
+  .image {
+    /*Reassigning rules for the image overlay*/
+    border-top-left-radius: 15px; /*Curving the top corner to give a better card appearance*/
+    border-bottom-right-radius: 0; /*Removing the curve at the bottom of the card*/
+  }
+
+  h1, /*Reassigning rules for several of the text sections*/
+  p,
+  .foot_notes {
+    margin-bottom: 0; /*Removing the space below the texts elements*/
+    margin-top: 20px; /*Adding spacing above each element*/
+  }
+}
+
+@media (max-width: 527px) {
+  /*Sets up rules for screen sizes 527px and smaller*/
+  :root {
+    /*Reassigning variable values*/
+    --Fs-xl: 3rem; /*Making the font size smaller to allow extra room in the third contianer*/
+  }
+
+  body {
+    /*Reassigning rules in the outer most container*/
+    padding: 20px; /*Pushing the second container away from all side of the outer container*/
+  }
+}
+
+@media (max-width: 446px) {
+  /*Sets up rules for screen sizes 446px and smaller*/
+  :root {
+    /*Reassigning variable values*/
+    --Fs-r: 1.3rem; /*Making the font size smaller to allow extra room in the third contianer*/
+  }
+}
+
+@media (max-width: 414px) {
+  /*Sets up rules for screen sizes 446px and smaller*/
+  :root {
+    /*Reassigning variable values*/
+    --Fs-xl: 2.4rem; /*Making the font size smaller to allow extra room in the third contianer*/
+    --Fs-r: 1.3rem; /*Making the font size smaller to allow extra room in the third contianer*/
+    --Fs-s: 1rem; /*Making the font size smaller to allow extra room in the third contianer*/
+  }
+
+  .card2 {
+    /*Reassigning rules for the fourth container*/
+    height: 300px; /*Using a fixed height to adjust the image ratio*/
+  }
+}
+
+@media (max-width: 325px) {
+  /*Sets up rules for screen sizes 325px and smaller*/
+  :root {
+    /*Reassigning variable values*/
+    --Fs-xl: 2rem; /*Making the font size smaller to allow extra room in the third contianer*/
+    --Fs-r: 1rem; /*Making the font size smaller to allow extra room in the third contianer*/
+    --Fs-s: 0.6rem; /*Making the font size smaller to allow extra room in the third contianer*/
+  }
+
+  body {
+    /*Reassigning rules in the outer most container*/
+    padding: 8px; /*Removing some spacing between the outer container sides and the second container*/
+  }
+}
