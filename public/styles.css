@@ -42,6 +42,8 @@ body {
   align-items: center; /*Centering content on the y-axis*/
   width: 100%; /*Using the full width of the window*/
   min-height: 100vh; /*Using the full height of the users viewport*/
+  padding-top: 100px;
+  padding-bottom: 100px;
   background-color: hsl(
     233,
     46%,
