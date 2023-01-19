@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/stats-preview-card-component-i4DVKfa71r)
 - Live Site URL: [Vercel](https://better-dev-stat-card.vercel.app/)
 
 ## My process
